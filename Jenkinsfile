@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './program_exec'
+                yesh './program_exec'
             }
         }
         stage('Deploy') {
@@ -22,7 +22,7 @@ pipeline {
     post {
         
         failure {
-            eco 'Pipeline failed.'
+            echo 'Pipeline failed.'
         }
     }
 }
